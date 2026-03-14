@@ -70,14 +70,14 @@ function exer3(){
         mes++;
     }
 
-    texto += ("resumo do ano: \n\n")
+    texto += ("Resumo do ano: \n\n")
 
     for(let i=0;i<12;i++){
-        texto += ("No mês: " + (i+1) + " você ganhou: " +ganhomes[i]) + ("     E gastou: " +gastomes[i] +"\n\n");
+        texto += ("No mês " + (i+1) + " você ganhou: " +ganhomes[i]) + ("     E gastou: " +gastomes[i] +"\n\n");
     }
 
-    texto += ("No ano você GANHOU um total de: " +ganhoano);
-    texto += ("No ano você GASTOU um total de: " +gastoano);
+    texto += ("\nNo ano você GANHOU um total de: " +ganhoano);
+    texto += ("\nNo ano você GASTOU um total de: " +gastoano);
 
     alert("o resultado está no console.")
 
@@ -99,11 +99,11 @@ function exer4(){
 
     for(let i = 0; i<4; i++){
         vetor[i] = parseInt(prompt("Insira um numero para o vetor"));
-        textoembaralha += (vetor[i]);
+        textoembaralha += (vetor[i]) + " ";
         console.log(vetor[i]);
     }
 
-        alert("os numeros escolhidos foram: " + textoembaralha  + " ");
+        alert("os numeros escolhidos foram: " + textoembaralha);
 
     for(let j = 0; j<4; j++){
     for(let i = 0; i<3; i++){
@@ -137,10 +137,16 @@ function exer5(){
     //Não faz sentido tranformar um numero par em impar mas imagino que queria que eu verificasse se a divisão por 2 dá 0.
     if(numero % 2 == 0){
         numero+=1
-    } else {
+        console.log("par");
+    } else if(numero %2 == 1){
         numero+=1
+        console.log("impar");
+    } else {
+        alert("Esse número não e um número par nem impar");
+        return;
     }
 
+    alert("O seu número agora é: " + numero);
     console.log("O seu número agora é: " + numero);
 
 }       
